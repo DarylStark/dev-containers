@@ -5,7 +5,7 @@ RUN apt-get update
 
 # Temporary: Upgrade python packages due to https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40897
 # They are installed by the base image (python) which does not have the patch.
-RUN python3 -m pip install --upgrade setuptools
+RUN python3 -m pip install --upgrade setuptools pip
 
 # [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
 COPY src/requirements.txt /tmp/pip-tmp/
